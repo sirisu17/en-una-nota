@@ -22,14 +22,34 @@ url
 
 function conectado(){
 
-let codigo=
+let params=
 
 new URLSearchParams(
 window.location.search
 )
-.get("code")
 
-return codigo!==null
+let code=
+
+params.get(
+"code"
+)
+
+if(code){
+
+localStorage
+.setItem(
+"spotify_ok",
+"si"
+)
+
+return true
+
+}
+
+return localStorage
+.getItem(
+"spotify_ok"
+)
 
 }
 async function obtenerCanciones(){
