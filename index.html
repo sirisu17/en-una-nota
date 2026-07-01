@@ -455,11 +455,20 @@ respuesta
 
 <script>
 
+
+
 window.onload=function(){
 
 if(
 conectado()
 ){
+
+document
+.querySelector(
+".spotify"
+)
+.style.display=
+"none"
 
 document
 .getElementById(
@@ -469,13 +478,14 @@ document
 .remove(
 "oculto"
 )
-obtenerCanciones()
+
 document
-.querySelector(
-".spotify"
+.getElementById(
+"usuario"
 )
-.style.display=
-"none"
+.innerHTML=
+
+"🟢 Spotify conectado"
 
 }
 
