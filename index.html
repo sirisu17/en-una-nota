@@ -483,11 +483,12 @@ document
 
 </script>
 
+
+
 <script>
 
-
-
-window.onload=function(){
+window.onload=
+async function(){
 
 if(
 conectado()
@@ -509,16 +510,9 @@ document
 "oculto"
 )
 
-document
-.getElementById(
-"usuario"
-)
-.innerHTML=
-
-"🟢 Spotify conectado"
+await iniciarJuego()
 
 }
-
 
 }
 
