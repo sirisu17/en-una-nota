@@ -1,4 +1,4 @@
-const CLIENT_ID="TU_CLIENT_ID"
+const CLIENT_ID="5a259001840a41d2a455fde31fd41b93"
 
 const REDIRECT_URI=
 window.location.origin
