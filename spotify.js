@@ -1,7 +1,7 @@
 const CLIENT_ID="5a259001840a41d2a455fde31fd41b93"
 
 const REDIRECT_URI=
-https://sirius17.github.io/en-una-nota/
+"https://sirius17.github.io/en-una-nota/"
 
 function loginSpotify(){
 
@@ -15,7 +15,8 @@ let url=
 
 .replace(/\n/g,"")
 
-location.href=url
+window.location.href=
+url
 
 }
 
@@ -64,3 +65,8 @@ canciones
 " canciones"
 
 }   
+window.history.replaceState(
+{},
+document.title,
+window.location.pathname
+)
