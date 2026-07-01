@@ -1,4 +1,4 @@
-const CLIENT_ID="5a259001840a41d2a455fde31fd41b93"
+const CLIENT_ID="TU_CLIENT_ID"
 
 const REDIRECT_URI=
 window.location.origin
@@ -9,13 +9,7 @@ function loginSpotify(){
 
 let url=
 
-`https://accounts.spotify.com/authorize
-?client_id=${CLIENT_ID}
-&response_type=code
-&redirect_uri=${encodeURIComponent(REDIRECT_URI)}
-&scope=user-library-read`
-
-.replace(/\n/g,"")
+`https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=user-library-read`
 
 window.location.href=
 url
@@ -24,49 +18,11 @@ url
 
 function conectado(){
 
-return
-
-window.location.search
+return window
+.location
+.search
 .includes(
 "code="
 )
 
 }
-async function obtenerCanciones(){
-
-document
-.getElementById(
-"usuario"
-)
-.innerHTML=
-
-"🟢 Spotify conectado"
-
-let canciones=
-
-Math.floor(
-Math.random()
-*
-500
-)
-+
-50
-
-estado.innerHTML=
-
-"🎵 Encontradas "
-
-+
-
-canciones
-
-+
-
-" canciones"
-
-}   
-window.history.replaceState(
-{},
-document.title,
-window.location.pathname
-)
