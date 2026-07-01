@@ -1,7 +1,9 @@
 const CLIENT_ID="5a259001840a41d2a455fde31fd41b93"
 
 const REDIRECT_URI=
-"https://sirius17.github.io/en-una-nota/"
+window.location.origin
++
+window.location.pathname
 
 function loginSpotify(){
 
@@ -22,33 +24,11 @@ url
 
 function conectado(){
 
-let params=
+return
 
-new URLSearchParams(
 window.location.search
-)
-
-let code=
-
-params.get(
-"code"
-)
-
-if(code){
-
-localStorage
-.setItem(
-"spotify_ok",
-"si"
-)
-
-return true
-
-}
-
-return localStorage
-.getItem(
-"spotify_ok"
+.includes(
+"code="
 )
 
 }
