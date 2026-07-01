@@ -1,7 +1,7 @@
 const CLIENT_ID="5a259001840a41d2a455fde31fd41b93"
 
 const REDIRECT_URI=
-"http://127.0.0.1:5500"
+https://sirius17.github.io/en-una-nota/
 
 function loginSpotify(){
 
